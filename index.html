@@ -1,0 +1,68 @@
+<html  ng-app = "nomeDaAplicacao" > <!-- Aqui fica o nome da aplicação -->
+
+	<head>
+
+		<title>Initial Uriel  </title>
+
+		<script src="angular.js"> </script>
+
+		<script >
+			
+			var tiraMediaIdades = function(p1,p2,p3){
+
+			let soma_idades = p1 + p2 + p3 ;
+			let media = soma_idades / 3;
+
+			return media;
+
+
+	 //Mostra no console a media de idades com 4 digitos decimais de preicsao
+
+	}
+		</script>
+
+		<script>
+			//var registro_de_componetes= angular.module("nomeDaAplicacao" , [] );	 //esse [] ficaria os novos módulos
+
+			//var registro_de_componetes= angular.module("nomeDaAplicacao" , [] ) //salva o modulo numa variavel visivel
+			angular.module("nomeDaAplicacao" , []);
+			angular.module("nomeDaAplicacao").controller ("ctrlApp" , function ($scope) { //Scope injetado
+
+				$scope.message =  "Hello World" ; //setta message como a string hello world
+				$scope.idade = tiraMediaIdades(19,20,21);
+
+
+			});
+
+		</script>
+
+	
+	</head>
+
+
+
+
+
+
+
+
+
+	<body ng-controller ="ctrlApp"> <!--O nome do controler pode ficar na tag que quiser, podem haver vários controllers em variastags-->
+
+		 {{message}}  <!--Interpolação, já está acessando scope, não precisa de $scope.message -->
+		 A idade da galera foi {{idade}}
+
+
+
+	</body>	
+
+
+
+
+
+
+
+
+
+
+</html>
